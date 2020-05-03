@@ -1,0 +1,62 @@
+sudo apt-get update
+sudo apt-get install firmware-b43-installer
+sudo apt-get install bcmwl-kernel-source 
+sudo apt-get upgrade
+sudo apt-get update
+sudo apt-get install lshw inxi
+inxi -G
+lsmod
+sudo apt-get install efibootmgr efivar efitools
+efiboot -v
+efibootmgr -v
+lspci
+inxi -G
+lshw
+lshw -C video
+sudo lshw -C video
+dmesg | grep -i efi
+lshw -businfo -class bridge -class display
+sudo lshw -businfo -class bridge -class display
+sudo setpci -s "00:17.0" 3e.b
+sudo setpci -s "04:00.0" 04.b
+cd /sys/firmware/
+ls
+cd efi
+ls
+cd ~
+sudo nano /etc/grub.d/01_enable_vga.conf
+sudo chmod 755 /etc/grub.d/01_enable_vga.conf
+sudo update-grub
+sudo nano /usr/share/X11/xorg.conf.d/50-synaptics.conf 
+cd /usr/share/X11/xorg.conf.d/
+ls
+sudo apt-get install gnome-tweaks
+sudo setpci -s "00:17.0" 3e.b
+sudo setpci -s "04:00.0" 04.b
+sudo setpci -s "00:17.0" 3e.b
+sudo lshw -businfo -class bridge -class display
+inxi -G
+sudo setpci -s "00:17.0" 3e.b
+sudo nano /etc/grub.d/01_enable_vga.conf
+efibootmgr -v
+efibootmgr --bootnext 0080
+sudo efibootmgr --bootnext 0080
+inxi -G
+efibootmgr -v
+cd /etc/default/
+ls
+sudo nano grub
+cd grub.d/
+ls
+nano init-select.cfg 
+fg
+efibootmgr -v
+inxi -G
+cd ..
+sudo nano grub
+sudo update-grub
+cd /etc/default/
+sudo nano grub
+sudo update-grub
+sudo nano /usr/share/X11/xorg.conf.d/10-nvidia-brightness.conf
+inxi -G

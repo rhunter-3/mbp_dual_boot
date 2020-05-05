@@ -1,0 +1,19 @@
+defaults write com.apple.finder AppleShowAllFiles YES
+sudo mkdir ~/Desktop/efi
+sudo mount -t msdos /dev/disk0s1 ~/Desktop/efi/
+sudo mount -t msdos /dev/disk0s1 ~/Desktop/efi/
+sudo mount -t msdos /dev/disk0s1 ~/Desktop/efi/
+sudo mkdir ~/Desktop/ubuntuefi
+sudo mount /dev/disk0s3 ~/Desktop/ubuntuefi/
+sudo mv ~/Downloads/os_ubuntu.icns /Volumes/Ubuntu/.VolumeIcon.icns
+sudo mkdir -f /Volumes/Ubuntu/System/Library/CoreSerntu/System/Library/CoreServices
+sudo mkdir /Volumes/Ubuntu/System
+sudo mkdir /Volumes/Ubuntu/System/Library
+sudo mkdir /Volumes/Ubuntu/System/Library/CoreServices
+echo "This file is required for booting" > /Volumes/Ubuntu/mach_kernel
+sudo cp /Volumes/Snow\ Leopard/System/Library/CoreServices/SystemVersion.plist /Volumes/Ubuntu/System/Library/CoreServices/SystemVersion.plist
+sudo nano /Volumes/Ubuntu/System/Library/CoreServices/SystemVersion.plist 
+sudo mv /Volumes/Ubuntu/System/Library/CoreServices/grubx64.efi /Volumes/Ubuntu/System/Library/CoreServices/boot.efi
+sudo bless --folder /Volumes/Ubuntu/ --file /Volumes/Ubuntu/System/Library/CoreServices/boot.efi --label Ubuntu
+reboot
+sudo reboot

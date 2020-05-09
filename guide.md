@@ -9,6 +9,9 @@ The main points of the setup are as follows:
 * Proprietary nVidia driver will be used (instead of the open source nouveau driver which casues heat and battery issues).
 
 Some minor issues that pop up are also detailed with fixes.
+![Boot Manager](mac_boot_manager_crop.jpg "Boot Manager")
+
+![Ubuntu Desktop](https://github.com/rhunter-3/hackintosh/blob/master/ubuntu_desktop.jpg "Ubuntu Desktop")
 
 ## Starting Point
 

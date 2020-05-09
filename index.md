@@ -33,7 +33,11 @@ Since I've now got a fresh installation of OS X, the first thing I do is change 
 enabled and right-click as the bottom right area of the trackpad. Next, I got rid of some rubbish apps from the dock and 
 added both Terminal and Disk Utility to the dock. I also downloaded Chrome since Safari was complaining about not being 
 supported or something and throwing occasional errors. I found it was handy being able to see hidden files so I enabled this 
-using terminal defaults write com.apple.finder AppleShowAllFiles YES.
+using terminal.
+
+```console
+rusty-MacBook-Pro:~ rusty$ defaults write com.apple.finder AppleShowAllFiles YES
+```
 
 After that you can hold the Option key and right-click Finder in the dock to relaunch Finder and hidden files should now be 
 visible. 
@@ -211,7 +215,7 @@ rusty-MacBook-Pro:~ rusty$ sudo reboot
 Hold the Option key so that you can reboot into os x, you should hopefully see your new icons and volume labels.
 
 Links that helped me get this setup working:  
-https://askubuntu.com/questions/264247/proprietary-nvidia-drivers-with-efi-on-mac-to-prevent-overheating  
+[https://askubuntu.com/questions/264247/proprietary-nvidia-drivers-with-efi-on-mac-to-prevent-overheating  ](https://askubuntu.com/questions/264247/proprietary-nvidia-drivers-with-efi-on-mac-to-prevent-overheating)  
 https://help.ubuntu.com/community/UEFIBooting  
 https://www.happyassassin.net/posts/2014/01/25/uefi-boot-how-does-that-actually-work-then/  
 https://ubuntuforums.org/archive/index.php/t-2220101.html  

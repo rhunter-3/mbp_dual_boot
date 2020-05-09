@@ -1,4 +1,4 @@
-# How to Dual Boot Macbook Pro with Ubuntu 20.04 Focal Fossa
+# Dual Boot Macbook Pro Snow Leopard with Ubuntu 20.04 Focal Fossa
 
 This guide walks through how to install Ubuntu 20.04 Focal Fossa alongside Mac OS X (Snow Leopard in my case) on a mid 2010 Macbook Pro (7,1).
 The main points of the setup are as follows:
@@ -10,8 +10,7 @@ The main points of the setup are as follows:
 
 Some minor issues that pop up are also detailed with fixes.
 ![Boot Manager](mac_boot_manager_crop.jpg "Boot Manager")
-
-![Ubuntu Desktop](https://github.com/rhunter-3/hackintosh/blob/master/ubuntu_desktop.jpg "Ubuntu Desktop")
+![Ubuntu Desktop](ubuntu_desktop.png "Ubuntu Desktop")
 
 ## Starting Point
 
@@ -189,6 +188,7 @@ Now with a finder window you should be able to click into the Ubuntu partition f
 3. Create an EFI folder.
 4. Copy the BOOT and ubuntu folders from the desktop into the EFI folder.
 5. Run the following commands in the terminal.
+
 ```console
 sudo mkdir -p /Volumes/Ubuntu/System/Library/CoreServices
 echo "This file is required for booting" > /Volumes/Ubuntu/mach_kernel
@@ -199,8 +199,10 @@ sudo mv /Volumes/Ubuntu/System/Library/CoreServices/grubx64.efi /Volumes/Ubuntu/
 sudo bless --folder /Volumes/Ubuntu/ --file /Volumes/Ubuntu/System/Library/CoreServices/boot.efi --label Ubuntu
 sudo mv ~/Downloads/os_ubuntu.icns /Volumes/Ubuntu/.VolumeIcon.icns
 ```
+
 6. Right-click Macintosh HD in Finder, click get info and rename it to Snow Leopard.
 7. Run the following commands in the terminal.
+
 ```console
 sudo mv ~/Downloads/snow_leopard.icns /Volumes/Ubuntu/.VolumeIcon.icns
 sudo reboot

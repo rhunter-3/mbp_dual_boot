@@ -1,4 +1,4 @@
-# Dual Boot Macbook Pro Snow Leopard with Ubuntu 20.04 Focal Fossa
+# Dual Boot Macbook Pro (mid 2010) Snow Leopard with Ubuntu 20.04 Focal Fossa
 
 This guide walks through how to install Ubuntu 20.04 Focal Fossa alongside Mac OS X (Snow Leopard in my case) on a mid 2010 Macbook Pro (7,1).
 The main points of the setup are as follows:
@@ -190,22 +190,22 @@ Now with a finder window you should be able to click into the Ubuntu partition f
 5. Run the following commands in the terminal.
 
 ```console
-sudo mkdir -p /Volumes/Ubuntu/System/Library/CoreServices
-echo "This file is required for booting" > /Volumes/Ubuntu/mach_kernel
-sudo cp /Volumes/Snow\ Leopard/System/Library/CoreServices/SystemVersion.plist /Volumes/Ubuntu/System/Library/CoreServices/SystemVersion.plist
-sudo nano /Volumes/Ubuntu/System/Library/CoreServices/SystemVersion.plist 
-sudo mv /Volumes/Ubuntu/System/Library
-sudo mv /Volumes/Ubuntu/System/Library/CoreServices/grubx64.efi /Volumes/Ubuntu/System/Library/CoreServices/boot.efi
-sudo bless --folder /Volumes/Ubuntu/ --file /Volumes/Ubuntu/System/Library/CoreServices/boot.efi --label Ubuntu
-sudo mv ~/Downloads/os_ubuntu.icns /Volumes/Ubuntu/.VolumeIcon.icns
+rusty-MacBook-Pro:~ rusty$ sudo mkdir -p /Volumes/Ubuntu/System/Library/CoreServices
+rusty-MacBook-Pro:~ rusty$ echo "This file is required for booting" > /Volumes/Ubuntu/mach_kernel
+rusty-MacBook-Pro:~ rusty$ sudo cp /Volumes/Snow\ Leopard/System/Library/CoreServices/SystemVersion.plist /Volumes/Ubuntu/System/Library/CoreServices/SystemVersion.plist
+rusty-MacBook-Pro:~ rusty$ sudo nano /Volumes/Ubuntu/System/Library/CoreServices/SystemVersion.plist 
+rusty-MacBook-Pro:~ rusty$ sudo mv /Volumes/Ubuntu/System/Library
+rusty-MacBook-Pro:~ rusty$ sudo mv /Volumes/Ubuntu/System/Library/CoreServices/grubx64.efi /Volumes/Ubuntu/System/Library/CoreServices/boot.efi
+rusty-MacBook-Pro:~ rusty$ sudo bless --folder /Volumes/Ubuntu/ --file /Volumes/Ubuntu/System/Library/CoreServices/boot.efi --label Ubuntu
+rusty-MacBook-Pro:~ rusty$ sudo mv ~/Downloads/os_ubuntu.icns /Volumes/Ubuntu/.VolumeIcon.icns
 ```
 
 6. Right-click Macintosh HD in Finder, click get info and rename it to Snow Leopard.
 7. Run the following commands in the terminal.
 
 ```console
-sudo mv ~/Downloads/snow_leopard.icns /Volumes/Ubuntu/.VolumeIcon.icns
-sudo reboot
+rusty-MacBook-Pro:~ rusty$ sudo mv ~/Downloads/snow_leopard.icns /Volumes/Ubuntu/.VolumeIcon.icns
+rusty-MacBook-Pro:~ rusty$ sudo reboot
 ```
 
 Hold the Option key so that you can reboot into os x, you should hopefully see your new icons and volume labels.
